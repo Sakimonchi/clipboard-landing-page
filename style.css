@@ -15,6 +15,7 @@
 body {
   color: var(--dark-grayish-blue);
   font-family: 'Bai Jamjuree', sans-serif;
+  margin: 0;
   text-align: center;
 }
 
@@ -29,28 +30,27 @@ img {
   max-width: 100%;
 }
 
+p {
+  line-height: 1.5;
+  color: var(--grayish-blue);
+}
+
 .container {
+  padding: 0 20px;
   margin: 40px auto;
   max-width: 100%;
   width: 1200px;
 }
 
 .container-small {
-  width: 700px;
+  width: 500px;
 }
 
 .flex {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   justify-content: center;
-}
-
-
-.section {
-  margin: 0 auto;
-  max-width: 100%;
-  width: 1200px;
+  flex-wrap: wrap;
 }
 
 .section .one {
@@ -59,6 +59,7 @@ img {
 
 .flex > * {
   flex: 1;
+  padding: 10px;
 }
 
 .btn {
@@ -67,12 +68,74 @@ img {
   color: white;
   font-family: 'Bai Jamjuree', sans-serif;
   font-weight: 600;
-  padding: 15px 25px;
+  padding: 15px 35px;
+  margin: 15px 5px;
 } 
 .btn-primary {
   background-color: var(--strong-cyan);
+  box-shadow: 0 3px 5px hsl(171, 67%, 34%);
 } 
 
 .btn-secondary {
   background-color: var(--right-blue);
+  box-shadow: 0 3px 5px hsl(232, 46%, 34%);
+}
+
+footer {
+  background-color: hsl(0, 8%, 91%);
+}
+
+footer img {
+  width: 40px;
+}
+
+footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+}
+
+footer .container {
+  margin-bottom: 0;
+}
+
+footer ul a {
+  color: var(--dark-grayish-blue);
+  text-decoration: none;
+}
+
+footer .links {
+  flex: 3;
+} 
+
+footer .links li {
+  margin-right: 30px;
+  padding: 5px;
+}
+
+footer .social li {
+  margin-right: 10px;
+  width: 20px;
+}
+
+footer .social a {
+  font-size: 24px;
+  margin: 0 5px;
+}
+
+
+
+@media (max-width: 768px) {
+  .flex {
+    flex-direction: column;
+  }
+
+  footer .links {
+    flex-direction: column;
+  }
+  footer .links li {
+    padding: 10px;
+    margin-right: 0;
+
 }
